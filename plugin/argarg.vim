@@ -2,9 +2,10 @@
 
 "
 function! argarg#LoadGitArgs()
-  " let mydate = call system('date')
-  let mydate = "date"
-  echo mydate
+  let mydate = system('date')
+  " let mydate = "date"
+  echom system('ls')
+  echom mydate
 endfunction
 
 command! ArgArgLoadGitArgs :call argarg#LoadGitArgs()
