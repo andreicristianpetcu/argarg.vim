@@ -3,7 +3,9 @@
 "
 function! argarg#LoadGitArgs()
   let git_files = system('git ls-files | egrep -v ''\.(png|jpg)$''')
-  echom git_files
+  for git_file in split(git_files)
+    echom git_file
+  endfor
 endfunction
 
 command! ArgArgLoadGitArgs :call argarg#LoadGitArgs()
