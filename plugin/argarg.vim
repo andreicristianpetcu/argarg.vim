@@ -2,7 +2,9 @@
 
 "
 function! argarg#LoadGitArgs()
-  echo "TEST"
+  " let mydate = call system('date')
+  let mydate = "date"
+  echo mydate
 endfunction
 
 command! ArgArgLoadGitArgs :call argarg#LoadGitArgs()
