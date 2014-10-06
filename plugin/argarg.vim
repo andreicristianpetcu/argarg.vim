@@ -9,8 +9,7 @@ function! argarg#LoadGitArgs()
   let git_files = system('git ls-files | egrep -v ''\.(' . ignored_files  .')$''')
 
   for git_file in split(git_files)
-    echom git_file
-    execute "argadd " git_file
+    execute "silent! argadd " git_file
   endfor
 endfunction
 
