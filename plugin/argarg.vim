@@ -14,4 +14,16 @@ function! argarg#LoadGitArgs()
   endfor
 endfunction
 
+function! argarg#FuzzySearch()
+  " Abolish -cmdline authorit{y,ies}Type test"
+  let existing_args_count = exe "abbreviate"
+endfunction
+
+function! argarg#SampleData()
+  Abolish -cmdline authorit{y,ies}Type test"
+endfunction
+
+
 command! ArgArgLoadGitArgs :call argarg#LoadGitArgs()
+command! ArgArgFuzzySearch :call argarg#FuzzySearch()
+command! ArgArgSampleData :call argarg#SampleData()
